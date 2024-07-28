@@ -1,5 +1,4 @@
 import streamlit as st
-import datetime
 
 def show():
     st.markdown("""
@@ -63,11 +62,6 @@ def show():
         height: 100%;
         transform: translateX(-50%);
     }
-    @keyframes shake {
-        0%, 100% { transform: rotate(0deg); }
-        25% { transform: rotate(5deg); }
-        75% { transform: rotate(-5deg); }
-    }
     .balloons {
         display: flex;
         justify-content: center;
@@ -92,6 +86,11 @@ def show():
         background: white;
         transform: translateX(-50%);
     }
+    @keyframes shake {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(5deg); }
+        75% { transform: rotate(-5deg); }
+    }
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-20px); }
@@ -109,7 +108,9 @@ def show():
         st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="gift-box"></div>', unsafe_allow_html=True)
+    st.markdown('<div class="gift-box">', unsafe_allow_html=True)
+    st.image('saggi.jpg', use_column_width=True)  # Replace 'path/to/your/image.jpg' with the path to your image
+    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown(f'<div class="signature">With lots of love, <br> Komalpreet</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
