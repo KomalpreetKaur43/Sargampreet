@@ -114,7 +114,7 @@ def show():
             st.markdown(f"""
             <div class="balloon">
                 <div class="button-container">
-                    <img src="data:image/jpeg;base64,{{st.image(saggi.jpg, use_column_width=True).getvalue().decode()}}" alt="Click Here">
+                    <img src="saggi.jpg;base64,{{st.image(saggi.jpg, use_column_width=True).getvalue().decode()}}" alt="Click Here">
                 </div>
             </div>
             """, unsafe_allow_html=True)
