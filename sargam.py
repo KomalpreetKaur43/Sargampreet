@@ -32,6 +32,34 @@ def show():
         font-style: normal;
         color: #FF69B4;
     }
+    .gift-box {
+        margin: 20px auto;
+        width: 150px;
+        height: 150px;
+        background-color: #FF4500;
+        border-radius: 10%;
+        position: relative;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+    .gift-box::before, .gift-box::after {
+        content: '';
+        position: absolute;
+        background-color: #FFD700;
+    }
+    .gift-box::before {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        transform: translateY(-50%);
+    }
+    .gift-box::after {
+        top: 0;
+        left: 50%;
+        width: 20px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
     .balloons {
         display: flex;
         justify-content: center;
@@ -42,7 +70,7 @@ def show():
         height: 80px;
         margin: 10px;
         border-radius: 50%;
-        background-color: #1E90FF;
+        background-color: #1E90FF; /* Blue color */
         position: relative;
         animation: float 3s ease-in-out infinite;
     }
@@ -69,29 +97,16 @@ def show():
     st.markdown('<div class="message">On your special day, I just want to say how much you mean to me. You bring so much joy and happiness into our lives, and I am so lucky to have a brother like you. Enjoy every moment, have fun, and make this day as amazing as you are!</div>', unsafe_allow_html=True)
     
     st.markdown('<div class="balloons">', unsafe_allow_html=True)
-    for i in range(5):
-        if i == 2:
-            st.markdown("""
-            <div class="balloon">
-                <div class="button-container">
-                    <form action="#">
-                        <button type="submit" id="click-here">🎁 Click Here</button>
-                    </form>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-        else:
-            st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
+    for _ in range(5):
+        st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-# First button to open the image
-    if st.button('Click here'):
-        st.image('saggi.jpg', caption='Here is your surprise!')
-
-
-    # Streamlit button to display the image
-    if st.button('🎁 Click to see your surprise'):
+    if st.button('🎁 Click here!'):
         st.image('saggi.jpg', use_column_width=True)  # Replace with your image path
+
+
+    if st.button('🎁 Click to Open Your Gift!'):
+        st.image('path/to/your/image.jpg', use_column_width=True)  # Replace with your image path
 
     st.markdown(f'<div class="signature">With lots of love, <br> Komalpreet</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
