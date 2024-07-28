@@ -39,8 +39,6 @@ def show():
         background-color: #FF4500;
         border-radius: 10%;
         position: relative;
-        animation: shake 0.5s;
-        animation-iteration-count: infinite;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     }
     .gift-box::before, .gift-box::after {
@@ -86,11 +84,6 @@ def show():
         background: white;
         transform: translateX(-50%);
     }
-    @keyframes shake {
-        0%, 100% { transform: rotate(0deg); }
-        25% { transform: rotate(5deg); }
-        75% { transform: rotate(-5deg); }
-    }
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-20px); }
@@ -108,9 +101,9 @@ def show():
         st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="gift-box">', unsafe_allow_html=True)
-    st.image('saggi.jpg', use_column_width=True)  # Replace 'path/to/your/image.jpg' with the path to your image
-    st.markdown('</div>', unsafe_allow_html=True)
+    # Create a button that will reveal the image
+    if st.button('🎁 Click to Open Your Gift!'):
+        st.image('path/to/your/image.jpg', use_column_width=True)  # Replace 'path/to/your/image.jpg' with the path to your image
 
     st.markdown(f'<div class="signature">With lots of love, <br> Komalpreet</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
