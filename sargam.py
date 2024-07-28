@@ -90,10 +90,8 @@ def show():
             st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-import streamlit as st
-
 # First button to open the image
-if st.button('Click here'):
+    if st.button('Click here'):
     st.image('path_to_your_image.jpg', caption='Here is your surprise!')
 
 
