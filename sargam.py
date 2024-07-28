@@ -26,18 +26,6 @@ def show():
         margin-bottom: 30px;
         font-style: italic;
     }
-    .card {
-        background-color: #FF69B4;
-        color: white;
-        padding: 20px;
-        border-radius: 15px;
-        margin: 20px 0;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        font-size: 18px;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-        display: inline-block;
-        text-align: center;
-    }
     .signature {
         font-size: 20px;
         margin-top: 50px;
@@ -108,16 +96,14 @@ def show():
     st.markdown('<div class="subheader">To the Best Little Brother Ever!</div>', unsafe_allow_html=True)
     st.markdown('<div class="message">On your special day, I just want to say how much you mean to me. You bring so much joy and happiness into our lives, and I am so lucky to have a brother like you. Enjoy every moment, have fun, and make this day as amazing as you are!</div>', unsafe_allow_html=True)
     
-    # Birthday Card
-    st.markdown('<div class="card">🎉 **Happy Birthday, Sargam!** 🎉<br> They say that great brothers are hard to find, but you make it look so easy! You are the funniest, smartest, and most charming brother anyone could ask for. And I promise, I didn\'t eat your cake... yet! 🎂 Wishing you all the laughs and love on your special day!</div>', unsafe_allow_html=True)
-    
     st.markdown('<div class="balloons">', unsafe_allow_html=True)
     for _ in range(5):
         st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
+    # Create a button that will reveal the image
     if st.button('🎁 Click to Open Your Gift!'):
-        st.image('saggi.jpg', use_column_width=True)
+        st.image('saggi.jpg', use_column_width=True)  # Replace 'path/to/your/image.jpg' with the path to your image
 
     st.markdown(f'<div class="signature">With lots of love, <br> Komalpreet</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
