@@ -32,34 +32,6 @@ def show():
         font-style: normal;
         color: #FF69B4;
     }
-    .gift-box {
-        margin: 20px auto;
-        width: 150px;
-        height: 150px;
-        background-color: #FF4500;
-        border-radius: 10%;
-        position: relative;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    }
-    .gift-box::before, .gift-box::after {
-        content: '';
-        position: absolute;
-        background-color: #FFD700;
-    }
-    .gift-box::before {
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 20px;
-        transform: translateY(-50%);
-    }
-    .gift-box::after {
-        top: 0;
-        left: 50%;
-        width: 20px;
-        height: 100%;
-        transform: translateX(-50%);
-    }
     .balloons {
         display: flex;
         justify-content: center;
@@ -86,24 +58,9 @@ def show():
     }
     .button-container {
         position: absolute;
-        left: 600%;
+        left: 50%;
         transform: translateX(-50%);
         margin-top: 10px;
-    }
-    .button-container button {
-        background-color: #FFD700;
-        color: #1E1E1E;
-        border: none;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        cursor: pointer;
-        font-size: 12px;
-    }
-    .button-container button img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
     }
     @keyframes float {
         0%, 100% { transform: translateY(0); }
@@ -120,13 +77,11 @@ def show():
     st.markdown('<div class="balloons">', unsafe_allow_html=True)
     for i in range(5):
         if i == 2:
-            st.markdown(f"""
+            st.markdown("""
             <div class="balloon">
                 <div class="button-container">
                     <form action="#">
-                        <button type="submit">
-                            <img src="saggi.jpg" alt="Click Here">
-                        </button>
+                        <button type="submit" id="click-here">🎁 Click Here</button>
                     </form>
                 </div>
             </div>
@@ -135,6 +90,7 @@ def show():
             st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
+    # Streamlit button to display the image
     if st.button('🎁 Click to see your surprise'):
         st.image('saggi.jpg', use_column_width=True)  # Replace with your image path
 
