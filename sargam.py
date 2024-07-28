@@ -86,15 +86,24 @@ def show():
     }
     .button-container {
         position: absolute;
-        left: 600%;
+        left: 50%;
         transform: translateX(-50%);
         margin-top: 10px;
     }
-    .button-container img {
+    .button-container button {
+        background-color: #FFD700;
+        color: #1E1E1E;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    .button-container button img {
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        cursor: pointer;
     }
     @keyframes float {
         0%, 100% { transform: translateY(0); }
@@ -114,7 +123,11 @@ def show():
             st.markdown(f"""
             <div class="balloon">
                 <div class="button-container">
-                    <img src="saggi.jpg";base64,{{st.image(saggi.jpg, use_column_width=True).getvalue().decode()}}" alt="Click Here">
+                    <form action="#">
+                        <button type="submit">
+                            <img src="saggi.jpg" alt="Click Here">
+                        </button>
+                    </form>
                 </div>
             </div>
             """, unsafe_allow_html=True)
