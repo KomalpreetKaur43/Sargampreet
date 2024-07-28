@@ -70,7 +70,7 @@ def show():
         height: 80px;
         margin: 10px;
         border-radius: 50%;
-        background-color: #1E90FF; /* Blue color */
+        background-color: #1E90FF;
         position: relative;
         animation: float 3s ease-in-out infinite;
     }
@@ -90,6 +90,12 @@ def show():
         transform: translateX(-50%);
         margin-top: 10px;
     }
+    .button-container img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-20px); }
@@ -105,12 +111,17 @@ def show():
     st.markdown('<div class="balloons">', unsafe_allow_html=True)
     for i in range(5):
         if i == 2:
-            st.markdown('<div class="balloon"><div class="button-container"><button>🎁 Click Here</button></div></div>', unsafe_allow_html=True)
+            st.markdown(f"""
+            <div class="balloon">
+                <div class="button-container">
+                    <img src="data:image/jpeg;base64,{{st.image(saggi.jpg, use_column_width=True).getvalue().decode()}}" alt="Click Here">
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
         else:
             st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Check if the button is clicked and display the image
     if st.button('🎁 Click Here'):
         st.image('saggi.jpg', use_column_width=True)  # Replace with your image path
 
