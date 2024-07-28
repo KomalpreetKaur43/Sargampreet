@@ -86,7 +86,7 @@ def show():
     }
     .button-container {
         position: absolute;
-        left: 600%;
+        left: 60%;
         transform: translateX(-50%);
         margin-top: 10px;
     }
@@ -110,6 +110,7 @@ def show():
             st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
+    # Check if the button is clicked and display the image
     if st.button('🎁 Click Here'):
         st.image('saggi.jpg', use_column_width=True)  # Replace with your image path
 
