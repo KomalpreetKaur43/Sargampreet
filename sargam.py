@@ -96,13 +96,16 @@ def show():
     st.markdown('<div class="subheader">To the Best Little Brother Ever!</div>', unsafe_allow_html=True)
     st.markdown('<div class="message">On your special day, I just want to say how much you mean to me. You bring so much joy and happiness into our lives, and I am so lucky to have a brother like you. Enjoy every moment, have fun, and make this day as amazing as you are!</div>', unsafe_allow_html=True)
     
-    st.markdown('<div class="balloons">', unsafe_allow_html=True)
-    for _ in range(5):
-        st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown('<div class="balloons">', unsafe_allow_html=True)
+        for _ in range(5):
+            st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
 
-    if st.button('🎁 Click Here'):
-        st.image('saggi.jpg', use_column_width=True)  # Replace with your image path
+    with col2:
+        if st.button('🎁 Click Here'):
+            st.image('saggi.jpg', use_column_width=True)  # Replace with your image path
 
     st.markdown(f'<div class="signature">With lots of love, <br> Komalpreet</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
