@@ -70,7 +70,7 @@ def show():
         height: 80px;
         margin: 10px;
         border-radius: 50%;
-        background-color: #FF69B4;
+        background-color: #1E90FF; /* Blue color */
         position: relative;
         animation: float 3s ease-in-out infinite;
     }
@@ -101,9 +101,8 @@ def show():
         st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Create a button that will reveal the image
     if st.button('🎁 Click to Open Your Gift!'):
-        st.image('saggi.jpg', use_column_width=True)  # Replace 'path/to/your/image.jpg' with the path to your image
+        st.image('saggi.jpg', use_column_width=True)  # Replace with your image path
 
     st.markdown(f'<div class="signature">With lots of love, <br> Komalpreet</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
