@@ -56,12 +56,6 @@ def show():
         background: white;
         transform: translateX(-50%);
     }
-    .button-container {
-        position: absolute;
-        left: 600%;
-        transform: translateX(-50%);
-        margin-top: 10px;
-    }
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-20px); }
