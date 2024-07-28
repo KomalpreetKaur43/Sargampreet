@@ -103,7 +103,7 @@ def show():
 
     # Create a button that will reveal the image
     if st.button('🎁 Click to Open Your Gift!'):
-        st.image('path/to/your/image.jpg', use_column_width=True)  # Replace 'path/to/your/image.jpg' with the path to your image
+        st.image('saggi.jpg', use_column_width=True)  # Replace 'path/to/your/image.jpg' with the path to your image
 
     st.markdown(f'<div class="signature">With lots of love, <br> Komalpreet</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
