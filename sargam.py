@@ -101,7 +101,7 @@ def show():
         st.markdown('<div class="balloon"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-    if st.button('🎁 Click to Open Your Gift!'):
+    if st.button('🎁 Click Here'):
         st.image('saggi.jpg', use_column_width=True)  # Replace with your image path
 
     st.markdown(f'<div class="signature">With lots of love, <br> Komalpreet</div>', unsafe_allow_html=True)
