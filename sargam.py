@@ -92,7 +92,7 @@ def show():
 
 # First button to open the image
     if st.button('Click here'):
-    st.image('path_to_your_image.jpg', caption='Here is your surprise!')
+        st.image('saggi.jpg', caption='Here is your surprise!')
 
 
     # Streamlit button to display the image
