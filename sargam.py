@@ -58,7 +58,7 @@ def show():
     }
     .button-container {
         position: absolute;
-        left: 50%;
+        left: 600%;
         transform: translateX(-50%);
         margin-top: 10px;
     }
